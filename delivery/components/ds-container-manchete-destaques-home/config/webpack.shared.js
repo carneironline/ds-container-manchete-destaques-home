@@ -25,7 +25,7 @@ module.exports = {
                         options: {
                             cacheDirectory: false,
                             presets: [
-                                "@babel/preset-react",
+                                ["@babel/preset-react", { runtime: "automatic" }],
                                 [
                                     "@babel/preset-env",
                                     {

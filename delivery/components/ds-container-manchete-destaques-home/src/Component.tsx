@@ -25,7 +25,7 @@ const Component: FC<ComponentProps> = ({
     </Helmet> */}
 
         {/* <ScopeComponent scope="scope" /> */}
-        <ComponentWrapper context={context} />
+        <ComponentWrapper context={context} filters={filters} />
     </>
 );
 

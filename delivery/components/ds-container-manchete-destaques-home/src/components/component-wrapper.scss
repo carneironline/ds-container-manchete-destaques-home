@@ -1,7 +1,7 @@
 @use '../styles' as *;
 
 .#{$component} {
-    &.is-layout-1 {
+    &.is-variant-0 {
         display: grid;
 
         grid-template-areas:

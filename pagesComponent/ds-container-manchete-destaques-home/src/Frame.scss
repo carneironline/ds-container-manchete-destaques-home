@@ -46,6 +46,13 @@ fieldset.fieldset-drop-in {
   padding: 6px 6px 24px 6px;
 }
 
+.column3 {
+  flex-grow: 1;
+  border: 1px solid black;
+  width: 33.3%;
+  padding: 6px 6px 24px 6px;
+}
+
 .text-align-center {
   text-align: center;
 }

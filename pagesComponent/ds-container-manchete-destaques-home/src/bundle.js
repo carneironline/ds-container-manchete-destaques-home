@@ -1,10 +1,10 @@
-import ContainerMancheteEDestaquesHome from "./Frame.js"
+import DsContainerMancheteDestaquesHome from "./Frame.js"
 import { constants } from "backstage-pages"
 
 export default {
-  name: "Container Manchete e Destaques Home ",
-  type: "container-manchete-e-destaques-home",
-  component: ContainerMancheteEDestaquesHome,
+  name: "ds-container-manchete-destaques-home",
+  type: "ds-container-manchete-destaques-home",
+  component: DsContainerMancheteDestaquesHome,
 
   // Change this if you want your component to have a different behaviour. E.g.: METADATA, COMPONENT, CONTAINER
   class: constants.COMPONENT_CLASS.COMPONENT,

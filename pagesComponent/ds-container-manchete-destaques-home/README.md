@@ -1,10 +1,10 @@
-# container-manchete-e-destaques-home - Pages Component
+# ds-container-manchete-destaques-home - Pages Component
 
-container-manchete-e-destaques-home
+ds-container-manchete-destaques-home
 
 ## Repositórios
 
-Gitlab: [gitlab@gitlab.globoi.com:container-manchete-e-destaques-home.git](https://gitlab.globoi.com/container-manchete-e-destaques-home)
+Gitlab: [gitlab@gitlab.globoi.com:ds-container-manchete-destaques-home.git](https://gitlab.globoi.com/ds-container-manchete-destaques-home)
 
 > A criação do repositório no gitlab não é automática, porém recomendada. E lembre-se de atualizar o remote local `git remote set-url origin gitlab@gitlab.globoi.com:<nome-do-grupo>/<slug-do-repo>.git`.
 

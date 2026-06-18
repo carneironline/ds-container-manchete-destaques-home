@@ -1,3 +1,3 @@
-var web = require("./dist/main.js")
+var web = require('./dist/main.js')
 
 module.exports = web

@@ -3,19 +3,19 @@ import CustomSelect from "./components/CustomSelect"
 import layouts from "./constants/layouts"
 import LayoutVariant0 from "./layouts/LayoutVariant0"
 import LayoutVariant1 from "./layouts/LayoutVariant1"
-import LayoutVariant2 from "./layouts/LayoutVariant2"
-import LayoutVariant3 from "./layouts/LayoutVariant3"
+// import LayoutVariant2 from "./layouts/LayoutVariant2"
+// import LayoutVariant3 from "./layouts/LayoutVariant3"
 
 import "./Frame.scss"
 
 const layoutComponents = {
   0: LayoutVariant0,
   1: LayoutVariant1,
-  2: LayoutVariant2,
-  3: LayoutVariant3,
+  // 2: LayoutVariant2,
+  // 3: LayoutVariant3,
 }
 
-function ContainerMancheteDestaquesHome(props) {
+export default function DsContainerMancheteDestaquesHome(props) {
   const inTemplate = true
 
   const selectedOptionSavedId =
@@ -54,5 +54,3 @@ function ContainerMancheteDestaquesHome(props) {
     </>
   )
 }
-
-export default ContainerMancheteDestaquesHome

@@ -1,61 +1,171 @@
 import React from "react"
-import { ComponentSelector } from "backstage-pages"
+import { Highlight } from "backstage-pages"
 
+/*
+ * 1 manchete com foto | 2 destaques com foto + 4 destaques sem foto + | 5 matérias sem foto
+ */
 function LayoutVariant1({ description, inTemplate, ...props }) {
   return (
     <fieldset className="fieldset-drop-in">
       <legend>{description}</legend>
       <div className="container full-width">
-        <div className="column">
-          <h4 className="text-align-center margin-bottom-12px">
-            Manchete com foto
-          </h4>
-          <ComponentSelector
-            {...props}
-            name={props.getFieldName("layout-1-manchete")}
-            componentFilter={el =>
-              ["componente-manchete", "drop-in-highlight", "hub-de-videos"].includes(el.type)
-            }
-            allowAdd={inTemplate}
-          />
+        <div className="column3 flex-col">
+          <div className="">
+            <h4 className="text-align-center margin-bottom-12px">
+              1 Manchete com foto
+            </h4>
+
+            <Highlight
+              idx="layout-1-manchete-com-foto"
+              name={props.getFieldName("layout-1-manchete-com-foto")}
+              subtitle={false}
+              image={true}
+              video={false}
+              {...props}
+            />
+          </div>
         </div>
-        <div className="column">
-          <h4 className="text-align-center margin-bottom-12px">Destaques</h4>
-          <div className="container">
-            <h2 className="row-indicator">Primeira linha</h2>
-            <div className="column no-border">
-              <ComponentSelector
+
+        <div className="column3 flex-col">
+          <div className="">
+            <h4 className="text-align-center margin-bottom-12px">
+              1 Destaque com foto
+            </h4>
+
+            <Highlight
+              idx="layout-1-destaque1-com-foto-1"
+              name={props.getFieldName("layout-1-destaque1-com-foto-1")}
+              subtitle={false}
+              image={false}
+              video={false}
+              {...props}
+            />
+          </div>
+
+          <div className="">
+            <h4 className="text-align-center margin-bottom-12px">
+              2 destaques sem foto
+            </h4>
+
+            <div className="container ">
+              <Highlight
+                idx="layout-1-destaque1-sem-foto-1"
+                name={props.getFieldName("layout-1-destaque1-sem-foto-1")}
+                subtitle={false}
+                image={false}
+                video={false}
                 {...props}
-                name={props.getFieldName("layout-1-destaque-com-foto-1")}
-                componentFilter="drop-in-highlight"
-                allowAdd={inTemplate}
               />
             </div>
-            <div className="column no-border">
-              <ComponentSelector
+            <div className="container ">
+              <Highlight
+                idx="layout-1-destaque1-sem-foto-2"
+                name={props.getFieldName("layout-1-destaque1-sem-foto-2")}
+                subtitle={false}
+                image={false}
+                video={false}
                 {...props}
-                name={props.getFieldName("layout-1-destaque-com-foto-2")}
-                componentFilter="drop-in-highlight"
-                allowAdd={inTemplate}
               />
             </div>
-            <h2 className="row-indicator">Segunda linha</h2>
-            <div className="column no-border">
-              <ComponentSelector
+          </div>
+        </div>
+
+        <div className="column3 flex-col">
+          <div className="">
+            <h4 className="text-align-center margin-bottom-12px">
+              1 Destaque com foto
+            </h4>
+
+            <Highlight
+              idx="layout-1-destaque2-com-foto-1"
+              name={props.getFieldName("layout-1-destaque2-com-foto-1")}
+              subtitle={false}
+              image={false}
+              video={false}
+              {...props}
+            />
+          </div>
+
+          <div className="">
+            <h4 className="text-align-center margin-bottom-12px">
+              2 destaques sem foto
+            </h4>
+
+            <div className="container ">
+              <Highlight
+                idx="layout-1-destaque2-sem-foto-1"
+                name={props.getFieldName("layout-1-destaque2-sem-foto-1")}
+                subtitle={false}
+                image={false}
+                video={false}
                 {...props}
-                name={props.getFieldName("layout-1-destaque-com-foto-3")}
-                componentFilter="drop-in-highlight"
-                allowAdd={inTemplate}
               />
             </div>
-            <div className="column no-border">
-              <ComponentSelector
+            <div className="container ">
+              <Highlight
+                idx="layout-1-destaque2-sem-foto-2"
+                name={props.getFieldName("layout-1-destaque2-sem-foto-2")}
+                subtitle={false}
+                image={false}
+                video={false}
                 {...props}
-                name={props.getFieldName("layout-1-destaque-com-foto-4")}
-                componentFilter="drop-in-highlight"
-                allowAdd={inTemplate}
               />
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container full-width">
+        <div className="column flex-col">
+          <h4 className="text-align-center margin-bottom-12px">
+            5 matérias com foto
+          </h4>
+
+          <div className="container gap-6">
+            <Highlight
+              idx="layout-1-materia-com-foto-1"
+              name={props.getFieldName("layout-1-materia-com-foto-1")}
+              subtitle={false}
+              image={true}
+              video={false}
+              {...props}
+            />
+
+            <Highlight
+              idx="layout-1-materia-com-foto-2"
+              name={props.getFieldName("layout-1-materia-com-foto-2")}
+              subtitle={false}
+              image={true}
+              video={false}
+              {...props}
+            />
+
+            <Highlight
+              idx="layout-1-materia-com-foto-3"
+              name={props.getFieldName("layout-1-materia-com-foto-3")}
+              subtitle={false}
+              image={true}
+              video={false}
+              {...props}
+            />
+
+            <Highlight
+              idx="layout-1-materia-com-foto-4"
+              name={props.getFieldName("layout-1-materia-com-foto-4")}
+              subtitle={false}
+              image={true}
+              video={false}
+              {...props}
+            />
+
+            <Highlight
+              idx="layout-1-materia-com-foto-5"
+              name={props.getFieldName("layout-1-materia-com-foto-5")}
+              subtitle={false}
+              image={true}
+              video={false}
+              {...props}
+            />
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
-node_modules/
+node_modules
 
 # testing
 /coverage
@@ -19,7 +19,7 @@ yarn-error.log*
 sandbox-cache.json
 
 # dist
-# dist/
+dist/
 
 # Created by https://www.gitignore.io/api/vim,linux,macos,sublimetext,visualstudiocode
 
@@ -117,4 +117,3 @@ tags
 .history
 
 # End of https://www.gitignore.io/api/vim,linux,macos,sublimetext,visualstudiocode
-venv/

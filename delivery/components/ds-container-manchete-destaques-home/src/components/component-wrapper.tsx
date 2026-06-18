@@ -1,31 +1,41 @@
 import React from 'react';
-import { LayoutVariant1 } from './layout-variant-1';
-import { LayoutVariant2 } from './layout-variant-2';
+import { LayoutVariant0 } from './variant-0/layout-variant-0';
+import { LayoutVariant1 } from './variant-1/layout-variant-1';
 import { LayoutVariantProps } from '../types/layout.types';
 
 import './component-wrapper.scss';
+import { getComponentBody } from '../utils/getComponentBody';
+import { Filters } from '../types';
 
-function getLayoutVariant(context?: Record<string, any>): React.ComponentType<LayoutVariantProps> {
-    if (context?.layoutVariant === 'variant-2') {
-        return LayoutVariant2;
+function getLayoutVariant({ variant = 0 }: { variant?: number }): React.ComponentType<LayoutVariantProps> {
+    if (variant === 1) {
+        return LayoutVariant1;
     }
 
-    return LayoutVariant1;
+    return LayoutVariant0;
 }
 
 interface ComponentWrapperProps {
     context?: Record<string, any> | undefined;
+    filters?: Filters;
 }
 
-export function ComponentWrapper({ context }: ComponentWrapperProps) {
+export function ComponentWrapper({ context, filters }: ComponentWrapperProps) {
     const componentClass = 'ds-container-manchete-destaques-home';
-    const Layout = getLayoutVariant(context);
-
-    console.log(context);
+    const componentBody = getComponentBody(context, 'ds-container-manchete-destaques-home');
+    const Layout = getLayoutVariant({
+        variant: (componentBody?.selectedOptionSavedId as number) || 0,
+    });
+    const tenantId = context?.api_content?.tenantId || '';
 
     return (
         <>
-            <Layout componentClass={componentClass} />
+            <Layout
+                componentClass={componentClass}
+                data={componentBody?.highlights}
+                filters={filters}
+                tenantId={tenantId}
+            />
         </>
     );
 }
