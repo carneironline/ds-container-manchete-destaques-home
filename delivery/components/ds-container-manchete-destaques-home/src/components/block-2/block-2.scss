@@ -1,0 +1,24 @@
+@use '../../styles' as *;
+
+.#{$component} {
+    &-block2 {
+        grid-area: block2;
+
+        &__col1 {
+            display: flex;
+            flex-direction: column;
+            gap: spacing(6);
+
+            article {
+                width: 100%;
+                max-width: unset;
+            }
+
+            &-bottom {
+                display: flex;
+                justify-content: space-between;
+                gap: spacing(8);
+            }
+        }
+    }
+}

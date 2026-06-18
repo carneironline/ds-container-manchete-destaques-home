@@ -1,0 +1,33 @@
+name: ds-container-manchete-destaques-home
+slug: ds-container-manchete-destaques-home
+namespace: infoglobo
+services: {}
+components:
+    deliveryComponents:
+        - name: ds-container-manchete-destaques-home
+          slug: ds-container-manchete-destaques-home
+          path: delivery/components/ds-container-manchete-destaques-home
+          version: 0.0.1
+          hooks:
+              predeploy:
+                  - cmd: make
+                    args:
+                        - -C
+                        - delivery/components/ds-container-manchete-destaques-home
+                        - build
+    pagesComponent:
+        - name: ds-container-manchete-destaques-home
+          slug: ds-container-manchete-destaques-home
+          path: pagesComponent/ds-container-manchete-destaques-home
+          version: 0.0.1
+          hooks:
+              predeploy:
+                  - cmd: make
+                    args:
+                        - -C
+                        - pagesComponent/ds-container-manchete-destaques-home
+                        - build
+
+metadata:
+    developer-portal/owner: backstage-editora
+apiVersion: project.provision.backstage/v1beta1

@@ -1,0 +1,14 @@
+@use '../../styles' as *;
+
+.#{$component} {
+    &-block1 {
+        grid-area: block1;
+        display: flex;
+        gap: spacing(4);
+
+        &__card-video {
+            width: 256px;
+            height: 454px;
+        }
+    }
+}

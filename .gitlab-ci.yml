@@ -1,0 +1,7 @@
+include:
+- show/ds-container-manchete-destaques-home/.gitlab-ci.yml
+stages:
+- codequality
+- tests
+- release
+- deploy

@@ -1,0 +1,41 @@
+{
+    "api": "backstage-pages",
+    "templateType": "ds-container-manchete-destaques-home",
+    "resource": {
+        "created": "2017-05-26T19:41:36.412Z",
+        "clientIp": "10.2.180.31",
+        "email": "sand.box@corp.globo.com",
+        "metaData": {},
+        "resource": {
+            "bastianInstance": "783539c7-7d8d-4164-9a42-b6b943bcb6ed",
+            "bodyData": {},
+            "category": "adf8b253-4e21-4015-b129-13b67c989edd",
+            "contentType": "1d8f3d02-e143-4e1a-91c6-c9a8870012e9",
+            "extends": "aaeab5a2-1f22-4381-82f3-307f7f67da85",
+            "hierarchyName": "oglobo / URL QA (Nao mexer)",
+            "metaData": {
+                "timeDelay": 240
+            },
+            "metaDescription": "Fique atualizado com as principais notícias e acompanhe tudo o que está acontecendo no Brasil e no mundo. Acesse O GLOBO!",
+            "metaTitle": "1030 O GLOBO | Confira as Principais Notícias do Brasil e do Mundo",
+            "name": "URL QA (Nao mexer)",
+            "slug": "url-qa-nao-mexer",
+            "status": {},
+            "created": "2022-12-05T15:07:19.971Z",
+            "modified": "2026-05-26T17:49:42.571Z",
+            "createdBy": "evelasquez@ogmaster.local",
+            "versionId": "f288f9df-5d79-4ca4-be36-9d7d52aa0c4f",
+            "id": "5ca7f85d-4728-415b-bf72-7d2b20ced08a",
+            "tenantId": "oglobo",
+            "accessControl": 0,
+            "categoryBranch": [],
+            "scheduled": false,
+            "scheduler": null,
+            "QPCategory": "551839a6-29a9-49ca-b25a-f73ea0695840",
+            "hatVideo": "",
+            "titleVideo": "Teste",
+            "Url": "https://oglobo.qa.globoi.com/url-qa-nao-mexer/?asasas"
+        },
+        "tenantId": "oglobo"
+    }
+}
