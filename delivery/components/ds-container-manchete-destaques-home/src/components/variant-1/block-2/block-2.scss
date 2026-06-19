@@ -1,0 +1,16 @@
+@use '../../../styles' as *;
+
+.#{$component} {
+    &-variant1-block2 {
+        grid-area: block2;
+
+        display: flex;
+        flex-direction: column;
+        gap: spacing(6);
+
+        article {
+            width: 100%;
+            max-width: unset;
+        }
+    }
+}

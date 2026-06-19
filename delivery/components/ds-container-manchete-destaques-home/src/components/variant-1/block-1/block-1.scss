@@ -1,7 +1,7 @@
 @use '../../../styles' as *;
 
 .#{$component} {
-    &-variant0-block1 {
+    &-variant1-block1 {
         grid-area: block1;
         display: flex;
         gap: spacing(4);

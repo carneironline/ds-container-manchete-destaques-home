@@ -1,7 +1,7 @@
 @use '../../../styles' as *;
 
 .#{$component} {
-    &-block2 {
+    &-variant0-block2 {
         grid-area: block2;
 
         &__col1 {
@@ -17,7 +17,12 @@
             &-bottom {
                 display: flex;
                 justify-content: space-between;
+                flex-direction: column;
                 gap: spacing(8);
+
+                @include desktop {
+                    flex-direction: row;
+                }
             }
         }
     }

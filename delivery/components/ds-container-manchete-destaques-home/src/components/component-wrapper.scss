@@ -18,4 +18,23 @@
                 'block3 block3';
         }
     }
+
+    &.is-variant-1 {
+        display: grid;
+
+        grid-template-areas:
+            'block1'
+            'block2'
+            'block3'
+            'block4';
+
+        gap: spacing(10);
+
+        @include desktop {
+            grid-template-columns: 1fr minmax(0, 256px) minmax(0, 256px);
+            grid-template-areas:
+                'block1 block2 block3'
+                'block4 block4 block4';
+        }
+    }
 }

@@ -3,16 +3,14 @@ import { CardNewsDefault } from '@nodo-ds/react-ui/card-news-default';
 import { CardNewsMain } from '@nodo-ds/react-ui/card-news-main';
 import { Divider } from '@nodo-ds/react-ui/divider';
 import { Highlights } from '../../../types/highlight.types';
-import { Filters } from '../../../types';
 
 interface Block2Props {
-    className?: string;
     componentClass?: string;
     data?: Highlights;
 }
 
-export default function Block2({ className = '', componentClass = '', data }: Block2Props) {
-    const componentClassName = `${componentClass}-block2`;
+export default function Block2({ componentClass = '', data }: Block2Props) {
+    const componentClassName = `${componentClass}-variant0-block2`;
 
     if (!data) return null;
 
@@ -21,7 +19,7 @@ export default function Block2({ className = '', componentClass = '', data }: Bl
     const dataDestaque2 = data?.['layout-0-destaque-sem-foto-2'];
 
     return (
-        <div className={`${componentClassName} ${className}`}>
+        <div className={`${componentClassName}`}>
             <div className={`${componentClassName}__col1`}>
                 <CardNewsMain
                     subtitle={dataMain?.subtitle}
@@ -49,8 +47,6 @@ export default function Block2({ className = '', componentClass = '', data }: Bl
                     />
                 </div>
             </div>
-
-            <div className={`${componentClassName}__col2`}></div>
         </div>
     );
 }

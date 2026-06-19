@@ -8,9 +8,7 @@ import { getComponentBody } from '../utils/getComponentBody';
 import { Filters } from '../types';
 
 function getLayoutVariant({ variant = 0 }: { variant?: number }): React.ComponentType<LayoutVariantProps> {
-    if (variant === 1) {
-        return LayoutVariant1;
-    }
+    if (variant === 1) return LayoutVariant1;
 
     return LayoutVariant0;
 }

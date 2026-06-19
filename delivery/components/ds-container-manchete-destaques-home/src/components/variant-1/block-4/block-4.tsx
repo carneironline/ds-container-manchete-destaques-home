@@ -1,10 +1,11 @@
-import './block-3.scss';
+import './block-4.scss';
 import { CardNewsDefault } from '@nodo-ds/react-ui/card-news-default';
 import { isMobile } from '../../../utils/isMobile';
 import { Filters } from '../../../types';
 import { Highlights } from '../../../types/highlight.types';
+import { Divider } from '@nodo-ds/react-ui';
 
-interface Block3Props {
+interface Block4Props {
     componentClass?: string;
     filters?: Filters;
     data?: Highlights;
@@ -24,8 +25,8 @@ function getCardsData(data: Highlights) {
     });
 }
 
-export default function Block3({ componentClass = '', data }: Block3Props) {
-    const componentClassName = `${componentClass}-variant0-block3`;
+export default function Variant1Block4({ componentClass = '', data }: Block4Props) {
+    const componentClassName = `${componentClass}-variant1-block4`;
 
     if (!data) return null;
 
@@ -37,7 +38,7 @@ export default function Block3({ componentClass = '', data }: Block3Props) {
     };
 
     return (
-        <div className={`${componentClassName}`}>
+        <div className={`${componentClassName} `}>
             {cardsData.map((card, index) => (
                 <CardNewsDefault
                     key={index}

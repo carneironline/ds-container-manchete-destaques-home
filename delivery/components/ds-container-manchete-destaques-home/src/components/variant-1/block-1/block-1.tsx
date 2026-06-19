@@ -8,8 +8,8 @@ interface Block1Props {
     data?: Highlights;
 }
 
-export default function Block1({ componentClass = '', data }: Block1Props) {
-    const componentClassName = `${componentClass}-variant0-block1`;
+export default function Variant1Block1({ componentClass = '', data }: Block1Props) {
+    const componentClassName = `${componentClass}-variant1-block1`;
 
     if (!data) return null;
 
