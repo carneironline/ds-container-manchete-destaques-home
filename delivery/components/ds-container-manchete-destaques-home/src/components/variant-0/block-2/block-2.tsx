@@ -10,7 +10,7 @@ interface Block2Props {
 }
 
 export default function Block2({ componentClass = '', data }: Block2Props) {
-    const componentClassName = `${componentClass}-variant0-block2`;
+    const componentClassName = `ds-container-manchete-destaques-home-variant0-block2`;
 
     if (!data) return null;
 

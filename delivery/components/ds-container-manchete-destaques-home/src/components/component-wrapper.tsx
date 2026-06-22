@@ -3,9 +3,10 @@ import { LayoutVariant0 } from './variant-0/layout-variant-0';
 import { LayoutVariant1 } from './variant-1/layout-variant-1';
 import { LayoutVariantProps } from '../types/layout.types';
 
-import './component-wrapper.scss';
 import { getComponentBody } from '../utils/getComponentBody';
 import { Filters } from '../types';
+
+import './component-wrapper.scss';
 
 function getLayoutVariant({ variant = 0 }: { variant?: number }): React.ComponentType<LayoutVariantProps> {
     if (variant === 1) return LayoutVariant1;
