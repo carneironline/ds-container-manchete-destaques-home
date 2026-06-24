@@ -16,7 +16,7 @@ const layoutComponents = {
 }
 
 export default function DsContainerMancheteDestaquesHome(props) {
-  const inTemplate = true
+  console.log(props)
 
   const selectedOptionSavedId =
     props.getValue("selectedOptionSavedId") || layouts[0].id
@@ -32,7 +32,7 @@ export default function DsContainerMancheteDestaquesHome(props) {
   const ActiveLayout = layoutComponents[selectedLayout.id]
 
   return (
-    <>
+    <div className="ds-container-manchete-destaques-home">
       <fieldset className="">
         <legend className="layout-fieldset__legend">Selecione o layout:</legend>
 
@@ -45,12 +45,8 @@ export default function DsContainerMancheteDestaquesHome(props) {
       </fieldset>
 
       {ActiveLayout && (
-        <ActiveLayout
-          {...props}
-          description={selectedLayout.description}
-          inTemplate={inTemplate}
-        />
+        <ActiveLayout {...props} description={selectedLayout.description} />
       )}
-    </>
+    </div>
   )
 }

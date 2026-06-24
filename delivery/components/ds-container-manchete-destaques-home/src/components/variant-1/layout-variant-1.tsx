@@ -3,12 +3,15 @@ import Variant1Block2 from './block-2/block-2';
 import Variant1Block3 from './block-3/block-3';
 import { LayoutVariantProps } from '../../types/layout.types';
 
-export function LayoutVariant1({ componentClass, data }: LayoutVariantProps) {
+/*
+ * 1 manchete com foto, 2 destaques com foto, 6 destaques sem foto
+ */
+export function LayoutVariant1({ componentClass }: LayoutVariantProps) {
     return (
         <div className={`${componentClass} is-variant-1`}>
-            <Variant1Block1 componentClass={componentClass} data={data} />
-            <Variant1Block2 componentClass={componentClass} data={data} />
-            <Variant1Block3 componentClass={componentClass} data={data} />
+            <Variant1Block1 />
+            <Variant1Block2 />
+            <Variant1Block3 />
         </div>
     );
 }

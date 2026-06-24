@@ -9,6 +9,7 @@ interface ComponentProps {
     context?: Record<string, any>;
     channel?: string;
     filters?: Filters;
+    client?: string;
     [key: string]: unknown;
 }
 
@@ -17,16 +18,26 @@ const Component: FC<ComponentProps> = ({
     context,
     channel,
     filters,
+    data,
+    client,
     ...rest
-}: ComponentProps): ReactElement => (
-    <>
-        {/* <Helmet>
+}: ComponentProps): ReactElement => {
+    return (
+        <>
+            {/* <Helmet>
       <title>Delivery Component Example</title>
     </Helmet> */}
 
-        {/* <ScopeComponent scope="scope" /> */}
-        <ComponentWrapper context={context} filters={filters} />
-    </>
-);
+            {/* <ScopeComponent scope="scope" /> */}
+            <ComponentWrapper
+                context={context}
+                channel={channel}
+                filters={filters}
+                data={data}
+                client={client}
+            />
+        </>
+    );
+};
 
 export default Component;

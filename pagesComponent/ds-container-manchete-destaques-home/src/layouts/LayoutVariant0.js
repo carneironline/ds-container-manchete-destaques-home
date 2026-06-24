@@ -2,9 +2,9 @@ import React from "react"
 import { Highlight } from "backstage-pages"
 
 /*
- * 1 manchete sem foto | 2 destaques sem foto | 1 manchete com foto |  5 matérias sem foto
+ * 1 manchete sem foto, dois destaques sem foto, 1 destaque com foto
  */
-function LayoutVariant0({ description, inTemplate, ...props }) {
+function LayoutVariant0({ description, ...props }) {
   return (
     <fieldset className="fieldset-drop-in">
       <legend>{description}</legend>
@@ -55,67 +55,12 @@ function LayoutVariant0({ description, inTemplate, ...props }) {
         <div className="column flex-col">
           <div className="">
             <h4 className="text-align-center margin-bottom-12px">
-              1 Manchete com foto
+              1 destaque com foto
             </h4>
 
             <Highlight
               idx="layout-0-manchete-com-foto"
               name={props.getFieldName("layout-0-manchete-com-foto")}
-              subtitle={false}
-              image={true}
-              video={false}
-              {...props}
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="container full-width">
-        <div className="column flex-col">
-          <h4 className="text-align-center margin-bottom-12px">
-            5 matérias com foto
-          </h4>
-
-          <div className="container gap-6">
-            <Highlight
-              idx="layout-0-materia-com-foto-1"
-              name={props.getFieldName("layout-0-materia-com-foto-1")}
-              subtitle={false}
-              image={true}
-              video={false}
-              {...props}
-            />
-
-            <Highlight
-              idx="layout-0-materia-com-foto-2"
-              name={props.getFieldName("layout-0-materia-com-foto-2")}
-              subtitle={false}
-              image={true}
-              video={false}
-              {...props}
-            />
-
-            <Highlight
-              idx="layout-0-materia-com-foto-3"
-              name={props.getFieldName("layout-0-materia-com-foto-3")}
-              subtitle={false}
-              image={true}
-              video={false}
-              {...props}
-            />
-
-            <Highlight
-              idx="layout-0-materia-com-foto-4"
-              name={props.getFieldName("layout-0-materia-com-foto-4")}
-              subtitle={false}
-              image={true}
-              video={false}
-              {...props}
-            />
-
-            <Highlight
-              idx="layout-0-materia-com-foto-5"
-              name={props.getFieldName("layout-0-materia-com-foto-5")}
               subtitle={false}
               image={true}
               video={false}

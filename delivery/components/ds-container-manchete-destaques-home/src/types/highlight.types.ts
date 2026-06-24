@@ -6,7 +6,7 @@ interface ImageCrop {
     top: number;
 }
 
-interface HighlightImage {
+export interface HighlightImage {
     crop: ImageCrop;
     height: number;
     isAnimated: boolean;
@@ -19,6 +19,7 @@ interface HighlightImage {
 export interface Highlight {
     hat: string;
     img: HighlightImage;
+    img2: HighlightImage;
     isBrandedContent: boolean;
     subtitle: string;
     title: string;

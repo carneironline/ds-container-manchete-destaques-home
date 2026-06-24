@@ -1,37 +1,32 @@
 import { CardNewsHighlight } from '@nodo-ds/react-ui/card-news-highlight';
+import { Highlight } from '../../../types/highlight.types';
+import { useComponentContext } from '../../../context/ComponentContext';
+import { useThumborUrl } from '../../../hooks/useThumborUrl';
 
 import './block-1.scss';
-import { Highlights } from '../../../types/highlight.types';
 
-interface Block1Props {
-    componentClass?: string;
-    data?: Highlights;
-}
-
-export default function Variant1Block1({ componentClass = '', data }: Block1Props) {
-    const componentClassName = `${componentClass}-variant1-block1`;
-
+export default function Variant1Block1() {
+    const { data, componentMainClass } = useComponentContext();
     if (!data) return null;
 
-    const block1Data = data?.['layout-0-manchete-com-foto'];
+    const getThumborUrl = useThumborUrl();
+    const componentClassName = `${componentMainClass}-variant1-block1`;
 
-    const image = {
-        url: block1Data.img.url,
-        alt: block1Data.title,
-        width: block1Data.img.width,
-        height: block1Data.img.height,
-    };
+    const block1Data = data?.highlights?.['layout-1-manchete-com-foto'] as Highlight;
+    const imgWidth = '528';
+    const imgHeight = '297';
+    const block1Img = getThumborUrl(block1Data.img, imgWidth, imgHeight);
 
     return (
         <div className={`${componentClassName}`}>
             <CardNewsHighlight
                 aria-label='Notícia em destaque'
                 resourceAlt='News highlight image'
-                resourceHeight='306'
+                resourceHeight={imgHeight}
                 resourcePosition='top'
                 resourceType='image'
-                resourceUrl={image.url}
-                resourceWidth='544'
+                resourceUrl={block1Img}
+                resourceWidth={imgWidth}
                 tagHat={block1Data.hat}
                 title={block1Data.title}
                 url={block1Data.url}

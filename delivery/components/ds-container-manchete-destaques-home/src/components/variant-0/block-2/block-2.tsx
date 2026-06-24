@@ -2,21 +2,19 @@ import './block-2.scss';
 import { CardNewsDefault } from '@nodo-ds/react-ui/card-news-default';
 import { CardNewsMain } from '@nodo-ds/react-ui/card-news-main';
 import { Divider } from '@nodo-ds/react-ui/divider';
-import { Highlights } from '../../../types/highlight.types';
+import { Highlight } from '../../../types/highlight.types';
+import { useComponentContext } from '../../../context/ComponentContext';
 
-interface Block2Props {
-    componentClass?: string;
-    data?: Highlights;
-}
-
-export default function Block2({ componentClass = '', data }: Block2Props) {
-    const componentClassName = `ds-container-manchete-destaques-home-variant0-block2`;
+export default function Block2() {
+    const { data, componentMainClass } = useComponentContext();
+    const componentClassName = `${componentMainClass}-variant0-block2`;
 
     if (!data) return null;
 
-    const dataMain = data?.['layout-0-manchete-sem-foto'];
-    const dataDestaque1 = data?.['layout-0-destaque-sem-foto-1'];
-    const dataDestaque2 = data?.['layout-0-destaque-sem-foto-2'];
+    const highlights = data?.highlights;
+    const dataMain = highlights?.['layout-0-manchete-sem-foto'] as Highlight;
+    const dataDestaque1 = highlights?.['layout-0-destaque-sem-foto-1'] as Highlight;
+    const dataDestaque2 = highlights?.['layout-0-destaque-sem-foto-2'] as Highlight;
 
     return (
         <div className={`${componentClassName}`}>

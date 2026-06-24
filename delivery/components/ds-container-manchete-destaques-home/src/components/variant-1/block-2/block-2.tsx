@@ -1,56 +1,51 @@
 import './block-2.scss';
-import { CardNewsDefault } from '@nodo-ds/react-ui/card-news-default';
-import { CardNewsMain } from '@nodo-ds/react-ui/card-news-main';
-import { Divider } from '@nodo-ds/react-ui/divider';
-import { Highlights } from '../../../types/highlight.types';
+import { Highlight } from '../../../types/highlight.types';
 import { CardNewsHighlight } from '@nodo-ds/react-ui';
+import { useComponentContext } from '../../../context/ComponentContext';
+import { useThumborUrl } from '../../../hooks/useThumborUrl';
+import { isMobile } from '../../../utils/isMobile';
+import { useEffect, useState } from 'react';
+import { Variant1CardNewsDefault } from '../variant-1-card-news-default';
 
-interface Block2Props {
-    componentClass?: string;
-    data?: Highlights;
-}
-
-export default function Variant1Block2({ componentClass = '', data }: Block2Props) {
-    const componentClassName = `${componentClass}-variant1-block2`;
-
+export default function Variant1Block2() {
+    const { data, componentMainClass } = useComponentContext();
+    const [resourcePosition, setResourcePosition] = useState<'top' | 'left'>('top');
     if (!data) return null;
 
-    const dataMain = data?.['layout-1-destaque1-com-foto-1'];
-    const dataDestaque1 = data?.['layout-1-destaque1-sem-foto-1'];
-    const dataDestaque2 = data?.['layout-1-destaque1-sem-foto-2'];
+    const getThumborUrl = useThumborUrl();
+    const componentClassName = `${componentMainClass}-variant1-block2`;
+    const highlights = data?.highlights;
+
+    const dataMain = highlights?.['layout-1-destaque1-com-foto-1'] as Highlight;
+    const imgWidth = '256';
+    const imgHeight = '144';
+    const dataMainImgUrl = getThumborUrl(dataMain.img, imgWidth, imgHeight);
+    const dataDestaque1 = highlights?.['layout-1-destaque1-sem-foto-1'] as Highlight;
+    const dataDestaque2 = highlights?.['layout-1-destaque1-sem-foto-2'] as Highlight;
+    const dataDestaque3 = highlights?.['layout-1-destaque1-sem-foto-3'] as Highlight;
+
+    useEffect(() => {
+        setResourcePosition(isMobile() ? 'left' : 'top');
+    }, []);
 
     return (
         <div className={`${componentClassName}`}>
             <CardNewsHighlight
                 aria-label='Notícia em destaque'
                 resourceAlt={dataMain.title}
-                resourceHeight='144'
-                resourcePosition='top'
+                resourceHeight={imgHeight}
+                resourcePosition={resourcePosition}
                 resourceType='image'
-                resourceUrl={dataMain.img.url}
-                resourceWidth='256'
+                resourceUrl={dataMainImgUrl}
+                resourceWidth={imgWidth}
                 tagHat={dataMain.hat}
                 title={dataMain.title}
                 url={dataMain.url}
             />
 
-            <Divider />
-
-            <CardNewsDefault
-                resourceType='none'
-                tagHat={dataDestaque1?.hat}
-                title={dataDestaque1?.title}
-                url={dataDestaque1?.url}
-            />
-
-            <Divider />
-
-            <CardNewsDefault
-                resourceType='none'
-                tagHat={dataDestaque2?.hat}
-                title={dataDestaque2?.title}
-                url={dataDestaque2?.url}
-            />
+            <Variant1CardNewsDefault data={dataDestaque1} />
+            <Variant1CardNewsDefault data={dataDestaque2} />
+            <Variant1CardNewsDefault data={dataDestaque3} />
         </div>
     );
 }

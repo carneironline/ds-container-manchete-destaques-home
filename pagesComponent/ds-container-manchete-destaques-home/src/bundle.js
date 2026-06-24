@@ -2,7 +2,7 @@ import DsContainerMancheteDestaquesHome from "./Frame.js"
 import { constants } from "backstage-pages"
 
 export default {
-  name: "ds-container-manchete-destaques-home",
+  name: "DS Container Manchete Destaques Home",
   type: "ds-container-manchete-destaques-home",
   component: DsContainerMancheteDestaquesHome,
 
