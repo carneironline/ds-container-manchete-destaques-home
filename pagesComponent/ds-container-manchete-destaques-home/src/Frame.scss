@@ -94,11 +94,22 @@
   }
 
   .highlight {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 4px;
     &-image2 {
       order: 90;
+    }
+
+    .trash-icon {
+      position: absolute;
+      bottom: -49px;
+      right: 0;
+
+      background: none;
+      border: none;
+      cursor: pointer;
     }
   }
 }

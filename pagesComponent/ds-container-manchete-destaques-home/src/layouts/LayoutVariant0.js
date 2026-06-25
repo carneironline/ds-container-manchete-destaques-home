@@ -1,10 +1,16 @@
-import React from "react"
+import React, { useCallback } from "react"
 import { Highlight } from "backstage-pages"
+import { HighlightTrashField } from "../components/HighlightTrashField"
 
 /*
  * 1 manchete sem foto, dois destaques sem foto, 1 destaque com foto
  */
 function LayoutVariant0({ description, ...props }) {
+  const renderTrashField = useCallback(
+    highlightProps => <HighlightTrashField {...highlightProps} />,
+    []
+  )
+
   return (
     <fieldset className="fieldset-drop-in">
       <legend>{description}</legend>
@@ -21,6 +27,7 @@ function LayoutVariant0({ description, ...props }) {
               subtitle={false}
               image={false}
               video={false}
+              renderCustomFields={renderTrashField}
               {...props}
             />
           </div>
@@ -37,6 +44,7 @@ function LayoutVariant0({ description, ...props }) {
                 subtitle={false}
                 image={false}
                 video={false}
+                renderCustomFields={renderTrashField}
                 {...props}
               />
 
@@ -46,6 +54,7 @@ function LayoutVariant0({ description, ...props }) {
                 subtitle={false}
                 image={false}
                 video={false}
+                renderCustomFields={renderTrashField}
                 {...props}
               />
             </div>
@@ -64,6 +73,7 @@ function LayoutVariant0({ description, ...props }) {
               subtitle={false}
               image={true}
               video={false}
+              renderCustomFields={renderTrashField}
               {...props}
             />
           </div>
