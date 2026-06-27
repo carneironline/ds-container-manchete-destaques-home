@@ -1,4 +1,4 @@
-import { Highlights } from '../types/highlight.types';
+import { Highlights } from '@/types/highlight.types';
 
 export interface ComponentBody {
     highlights?: Highlights;

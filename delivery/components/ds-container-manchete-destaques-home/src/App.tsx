@@ -1,6 +1,6 @@
 import { type FC, type ReactElement } from 'react';
 import ReactDOM from 'react-dom';
-import Component from './Component';
+import Component from '@/Component';
 
 const App: FC = (): ReactElement => (
     <Component ScopeComponent={() => <></>} context={{} as Record<string, any>} channel='raw' />

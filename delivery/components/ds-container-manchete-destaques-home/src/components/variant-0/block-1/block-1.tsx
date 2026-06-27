@@ -1,8 +1,8 @@
 import { CardNewsHighlight } from '@nodo-ds/react-ui/card-news-highlight';
 
 import './block-1.scss';
-import { Highlight } from '../../../types/highlight.types';
-import { useComponentContext } from '../../../context/ComponentContext';
+import { Highlight } from '@/types/highlight.types';
+import { useComponentContext } from '@/context/ComponentContext';
 
 export default function Block1() {
     const { data, componentMainClass } = useComponentContext();

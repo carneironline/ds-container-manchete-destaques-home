@@ -1,10 +1,10 @@
 import './block-3.scss';
 import { CardNewsHighlight } from '@nodo-ds/react-ui';
-import { useComponentContext } from '../../../context/ComponentContext';
-import { useThumborUrl } from '../../../hooks/useThumborUrl';
+import { useComponentContext } from '@/context/ComponentContext';
+import { useThumborUrl } from '@/hooks/useThumborUrl';
 import { useEffect, useState } from 'react';
-import { isMobile } from '../../../utils/isMobile';
-import { Variant1CardNewsDefault } from '../variant-1-card-news-default';
+import { isMobile } from '@/utils/isMobile';
+import { Variant1CardNewsDefault } from '@/components/variant-1/variant-1-card-news-default';
 
 export default function Variant1Block3() {
     const { data, componentMainClass } = useComponentContext();

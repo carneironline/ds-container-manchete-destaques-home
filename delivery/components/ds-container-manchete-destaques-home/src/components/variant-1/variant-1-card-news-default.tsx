@@ -1,5 +1,5 @@
 import { CardNewsDefault, Divider } from '@nodo-ds/react-ui';
-import { Highlight } from '../../types/highlight.types';
+import { Highlight } from '@/types/highlight.types';
 
 interface Variant1CardNewsDefaultProps {
     data: Highlight;

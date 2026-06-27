@@ -1,26 +1,25 @@
 import React, { type ComponentType, type FC, type ReactElement } from 'react';
-import { Filters } from './types';
+import { Filters } from '@/types';
 
-import './styles/style.scss';
-import { ComponentWrapper } from './components/component-wrapper';
+import '@/styles/style.scss';
+import { ComponentWrapper } from '@/components/component-wrapper';
 
 interface ComponentProps {
     ScopeComponent: ComponentType<any>;
     context?: Record<string, any>;
     channel?: string;
     filters?: Filters;
+    data?: Record<string, any>;
     client?: string;
     [key: string]: unknown;
 }
 
 const Component: FC<ComponentProps> = ({
-    ScopeComponent,
     context,
     channel,
     filters,
     data,
     client,
-    ...rest
 }: ComponentProps): ReactElement => {
     return (
         <>

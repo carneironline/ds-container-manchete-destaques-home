@@ -2,8 +2,8 @@ import './block-2.scss';
 import { CardNewsDefault } from '@nodo-ds/react-ui/card-news-default';
 import { CardNewsMain } from '@nodo-ds/react-ui/card-news-main';
 import { Divider } from '@nodo-ds/react-ui/divider';
-import { Highlight } from '../../../types/highlight.types';
-import { useComponentContext } from '../../../context/ComponentContext';
+import { Highlight } from '@/types/highlight.types';
+import { useComponentContext } from '@/context/ComponentContext';
 
 export default function Block2() {
     const { data, componentMainClass } = useComponentContext();

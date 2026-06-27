@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react';
-import { Filters } from '../types';
+import { Filters } from '@/types';
 
 interface ComponentContextValue {
     context?: Record<string, any>;

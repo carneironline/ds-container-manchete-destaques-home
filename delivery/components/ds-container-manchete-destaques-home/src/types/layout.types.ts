@@ -1,5 +1,5 @@
-import { Filters } from '../types';
-import { Highlights } from './highlight.types';
+import { Filters } from '@/types';
+import { Highlights } from '@/types/highlight.types';
 
 export interface LayoutVariantProps {
     componentClass?: string;

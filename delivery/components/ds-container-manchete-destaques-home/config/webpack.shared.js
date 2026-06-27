@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
     devtool: 'source-map',
     optimization: {
@@ -6,6 +8,9 @@ module.exports = {
     },
     resolve: {
         extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
+        alias: {
+            '@': path.resolve(__dirname, '../src'),
+        },
     },
     module: {
         rules: [

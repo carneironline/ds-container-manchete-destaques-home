@@ -1,7 +1,7 @@
 import { CardNewsHighlight } from '@nodo-ds/react-ui/card-news-highlight';
-import { Highlight } from '../../../types/highlight.types';
-import { useComponentContext } from '../../../context/ComponentContext';
-import { useThumborUrl } from '../../../hooks/useThumborUrl';
+import { Highlight } from '@/types/highlight.types';
+import { useComponentContext } from '@/context/ComponentContext';
+import { useThumborUrl } from '@/hooks/useThumborUrl';
 
 import './block-1.scss';
 

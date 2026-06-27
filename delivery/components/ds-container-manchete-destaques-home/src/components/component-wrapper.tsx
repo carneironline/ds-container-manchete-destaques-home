@@ -1,10 +1,10 @@
 import React from 'react';
-import { LayoutVariant0 } from './variant-0/layout-variant-0';
-import { LayoutVariant1 } from './variant-1/layout-variant-1';
-import { LayoutVariantProps } from '../types/layout.types';
+import { LayoutVariant0 } from '@/components/variant-0/layout-variant-0';
+import { LayoutVariant1 } from '@/components/variant-1/layout-variant-1';
+import { LayoutVariantProps } from '@/types/layout.types';
 
-import { Filters } from '../types';
-import { ComponentContextProvider } from '../context/ComponentContext';
+import { Filters } from '@/types';
+import { ComponentContextProvider } from '@/context/ComponentContext';
 
 import './component-wrapper.scss';
 

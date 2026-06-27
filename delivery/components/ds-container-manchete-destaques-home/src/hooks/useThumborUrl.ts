@@ -1,5 +1,5 @@
-import { useComponentContext } from '../context/ComponentContext';
-import { HighlightImage } from '../types/highlight.types';
+import { useComponentContext } from '@/context/ComponentContext';
+import { HighlightImage } from '@/types/highlight.types';
 
 export function useThumborUrl() {
     const { filters, tenantId } = useComponentContext();
