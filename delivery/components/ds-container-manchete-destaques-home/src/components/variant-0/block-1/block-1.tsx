@@ -6,10 +6,10 @@ import { useComponentContext } from '@/context/ComponentContext';
 
 export default function Block1() {
     const { data, componentMainClass } = useComponentContext();
-    const componentClassName = `${componentMainClass}-variant0-block1`;
 
     if (!data) return null;
 
+    const componentClassName = `${componentMainClass}-variant0-block1`;
     const highlights = data?.highlights;
 
     const block1Data = highlights?.['layout-0-manchete-com-foto'] as Highlight;

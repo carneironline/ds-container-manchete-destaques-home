@@ -9,9 +9,9 @@ import { Variant1CardNewsDefault } from '@/components/variant-1/variant-1-card-n
 
 export default function Variant1Block2() {
     const { data, componentMainClass } = useComponentContext();
-    const [resourcePosition, setResourcePosition] = useState<'top' | 'left'>('top');
     if (!data) return null;
 
+    const [resourcePosition, setResourcePosition] = useState<'top' | 'left'>('top');
     const getThumborUrl = useThumborUrl();
     const componentClassName = `${componentMainClass}-variant1-block2`;
     const highlights = data?.highlights;
