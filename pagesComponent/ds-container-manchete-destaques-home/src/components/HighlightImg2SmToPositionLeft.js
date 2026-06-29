@@ -2,21 +2,13 @@ import React from "react"
 import { change } from "redux-form"
 import { ImageSelectorInput } from "backstage-admin"
 import { ImageSync } from "./ImageSync"
-import { TrashIcon } from "./icons/TrashIcon"
-
-const EMPTY_HIGHLIGHT = { hat: "", title: "", url: "", img: {}, img2: {} }
+import { HighlightTrashField } from "./HighlightTrashField"
 
 export function HighlightImg2SmToPositionLeft(highlightProps) {
   const { idx, getFieldName, meta } = highlightProps
-  const { dispatch, form } = meta
 
   const highlightKey = `highlights[${idx}]`
   const img2Field = getFieldName(`${highlightKey}.img2`)
-  const baseField = getFieldName(highlightKey)
-
-  const handleClear = () => {
-    dispatch(change(form, baseField, EMPTY_HIGHLIGHT))
-  }
 
   return (
     <div className="highlight-image2">
@@ -42,16 +34,12 @@ export function HighlightImg2SmToPositionLeft(highlightProps) {
         cropProps={{ aspect: 1 / 1 }}
       />
 
-      {highlightProps.content?.url && highlightProps.content?.hat && highlightProps.content?.title && (
-        <button
-          type="button"
-          onClick={handleClear}
-          className="trash-icon"
-          title="Limpar conteúdo"
-        >
-          <TrashIcon />
-        </button>
-      )}
+      <HighlightTrashField
+        idx={idx}
+        getFieldName={getFieldName}
+        meta={meta}
+        content={highlightProps.content}
+      />
     </div>
   )
 }
