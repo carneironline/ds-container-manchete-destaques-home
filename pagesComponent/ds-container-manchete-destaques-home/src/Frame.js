@@ -16,8 +16,6 @@ const layoutComponents = {
 }
 
 export default function DsContainerMancheteDestaquesHome(props) {
-  console.log(props)
-
   const selectedOptionSavedId =
     props.getValue("selectedOptionSavedId") || layouts[0].id
   const foundLayout = layouts.find(
