@@ -15,7 +15,7 @@ function LayoutVariant0({ description, ...props }) {
     <fieldset className="fieldset-drop-in">
       <legend>{description}</legend>
       <div className="container full-width">
-        <div className="column flex-col">
+        <div className="column flex flex-col">
           <div className="">
             <h4 className="text-align-center margin-bottom-12px">
               1 Manchete sem foto

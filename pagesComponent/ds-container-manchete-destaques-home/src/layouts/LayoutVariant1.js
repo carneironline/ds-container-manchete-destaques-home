@@ -41,7 +41,7 @@ function LayoutVariant1({ description, ...props }) {
           </div>
         </div>
 
-        <div className="column3 flex-col">
+        <div className="column3 flex flex-col ">
           <div className="">
             <h4 className="text-align-center margin-bottom-12px">
               1 Destaque com foto
@@ -64,43 +64,47 @@ function LayoutVariant1({ description, ...props }) {
               3 destaques sem foto
             </h4>
 
-            <div className="container ">
-              <Highlight
-                idx="layout-1-destaque1-sem-foto-1"
-                name={props.getFieldName("layout-1-destaque1-sem-foto-1")}
-                subtitle={false}
-                image={false}
-                video={false}
-                renderCustomFields={renderTrashField}
-                {...props}
-              />
-            </div>
-            <div className="container ">
-              <Highlight
-                idx="layout-1-destaque1-sem-foto-2"
-                name={props.getFieldName("layout-1-destaque1-sem-foto-2")}
-                subtitle={false}
-                image={false}
-                video={false}
-                renderCustomFields={renderTrashField}
-                {...props}
-              />
-            </div>
-            <div className="container ">
-              <Highlight
-                idx="layout-1-destaque1-sem-foto-3"
-                name={props.getFieldName("layout-1-destaque1-sem-foto-3")}
-                subtitle={false}
-                image={false}
-                video={false}
-                renderCustomFields={renderTrashField}
-                {...props}
-              />
+            <div className="flex flex-col gap-6">
+              <div className="container ">
+                <Highlight
+                  idx="layout-1-destaque1-sem-foto-1"
+                  name={props.getFieldName("layout-1-destaque1-sem-foto-1")}
+                  subtitle={false}
+                  image={false}
+                  video={false}
+                  renderCustomFields={renderTrashField}
+                  {...props}
+                />
+              </div>
+
+              <div className="container ">
+                <Highlight
+                  idx="layout-1-destaque1-sem-foto-2"
+                  name={props.getFieldName("layout-1-destaque1-sem-foto-2")}
+                  subtitle={false}
+                  image={false}
+                  video={false}
+                  renderCustomFields={renderTrashField}
+                  {...props}
+                />
+              </div>
+
+              <div className="container ">
+                <Highlight
+                  idx="layout-1-destaque1-sem-foto-3"
+                  name={props.getFieldName("layout-1-destaque1-sem-foto-3")}
+                  subtitle={false}
+                  image={false}
+                  video={false}
+                  renderCustomFields={renderTrashField}
+                  {...props}
+                />
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="column3 flex-col">
+        <div className="column3 flex flex-col ">
           <div className="">
             <h4 className="text-align-center margin-bottom-12px">
               1 Destaque com foto
@@ -122,38 +126,40 @@ function LayoutVariant1({ description, ...props }) {
               3 destaques sem foto
             </h4>
 
-            <div className="container ">
-              <Highlight
-                idx="layout-1-destaque2-sem-foto-1"
-                name={props.getFieldName("layout-1-destaque2-sem-foto-1")}
-                subtitle={false}
-                image={false}
-                video={false}
-                renderCustomFields={renderImg2SmToPositionLeft}
-                {...props}
-              />
-            </div>
-            <div className="container ">
-              <Highlight
-                idx="layout-1-destaque2-sem-foto-2"
-                name={props.getFieldName("layout-1-destaque2-sem-foto-2")}
-                subtitle={false}
-                image={false}
-                video={false}
-                renderCustomFields={renderImg2SmToPositionLeft}
-                {...props}
-              />
-            </div>
-            <div className="container ">
-              <Highlight
-                idx="layout-1-destaque2-sem-foto-3"
-                name={props.getFieldName("layout-1-destaque2-sem-foto-3")}
-                subtitle={false}
-                image={false}
-                video={false}
-                renderCustomFields={renderImg2SmToPositionLeft}
-                {...props}
-              />
+            <div className="flex flex-col gap-6">
+              <div className="container ">
+                <Highlight
+                  idx="layout-1-destaque2-sem-foto-1"
+                  name={props.getFieldName("layout-1-destaque2-sem-foto-1")}
+                  subtitle={false}
+                  image={false}
+                  video={false}
+                  renderCustomFields={renderImg2SmToPositionLeft}
+                  {...props}
+                />
+              </div>
+              <div className="container ">
+                <Highlight
+                  idx="layout-1-destaque2-sem-foto-2"
+                  name={props.getFieldName("layout-1-destaque2-sem-foto-2")}
+                  subtitle={false}
+                  image={false}
+                  video={false}
+                  renderCustomFields={renderImg2SmToPositionLeft}
+                  {...props}
+                />
+              </div>
+              <div className="container ">
+                <Highlight
+                  idx="layout-1-destaque2-sem-foto-3"
+                  name={props.getFieldName("layout-1-destaque2-sem-foto-3")}
+                  subtitle={false}
+                  image={false}
+                  video={false}
+                  renderCustomFields={renderImg2SmToPositionLeft}
+                  {...props}
+                />
+              </div>
             </div>
           </div>
         </div>
